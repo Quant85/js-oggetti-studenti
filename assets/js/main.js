@@ -48,6 +48,21 @@ var studenti = [
   }
 ];
 
+class StudenteIesimo {
+  constructor(nome, cognome, età) {
+    this.firstName = nome;
+    this.surname = cognome;
+    this.age = età;
+  }
+}
+var lunghezzaArrayStudenti = studenti.length;
+console.log(lunghezzaArrayStudenti);
+
+var studentePlus = "studente" + (lunghezzaArrayStudenti + 1);
+console.log(studentePlus);
+
+
+/*
 var nome = prompt("Inserisci il nome dello studente");
 var cognome = prompt("Inserisci il cognonome dello studente");
 var età = parseInt(prompt("Inserisci l'età dello studente"));
@@ -57,7 +72,7 @@ studente4 = {
   età: età
 };
 studenti.push(studente4);
-console.log(studenti);
+console.log(studenti); */
 
 
 

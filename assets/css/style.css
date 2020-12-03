@@ -1,0 +1,66 @@
+/* Reset Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utility Class */
+.d-flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* BODY */
+body {
+  min-width: 700px;
+  width: 100vw;
+  color: #030303;
+  background: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* MAIN */
+
+/* Typography */
+
+.row {
+  justify-content: space-around;
+}
+
+label,
+.row.input {
+  color: #df400f;
+  padding-bottom: 20px;
+}
+
+.row.input {
+  margin-top: 30px;
+}
+
+
+input[type=text],
+input[type=number],
+select,
+input[type=submit],
+input[type=button] {
+  font-weight: 500;
+  padding: 8px 10px;
+  border: 1px solid #b91450;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+input[type=submit],
+input[type=button] {
+  font-size: 1.02rem;
+  font-weight: bold;
+  color: #b91450;
+  margin: 0 5px;
+}

@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Oggetti |Studenti</title>
 </head>
 
@@ -37,9 +39,36 @@
 
           </tr>
         </tbody>
-
       </table>
       <!-- /#students_table -->
+
+      <div id="ticket_form">
+        <div class="row d-flex">
+          <div class="col">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="nome" placeholder="Paperon" 
+              title="Inserire nome" required>
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <label for="surname">Cognome</label>
+            <input type="text" name="surname" id="cognome" placeholder="De Paperoni" title="Inserire cognome" required>
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <label for="age">Età</label>
+            <input type="number" name="age" id="età" placeholder="99" title="Inserire l'età" required>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="row input">
+          <input type="submit" id="bt_genera" value="Aggiungi">
+          <input type="button" id="bt_annulla" value="Elimina">
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.box_card -->
   
     </section>
   </main>
