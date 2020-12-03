@@ -9,7 +9,12 @@ var esercizio = {
 
 console.log(esercizio);
 
+//Funzioni - 
 
+function capitalize(str) { 
+  if (typeof str !== 'string' ) return ' ';
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 //1. Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età.
 
 var studente = {
@@ -23,56 +28,64 @@ console.log(studente);
 
 //2. Stampare a schermo attraverso il for in tutte le proprietà.
 for (var key in studente) {
-  console.log(studente[key]);
   console.log(key);
+  console.log(studente[key]);
   var headerTable = `<th>${studente.key}</th>`;
   document.getElementById('nome_proprietà').insertAdjacentHTML('beforeend', `<th>${key}</th>` );
   document.getElementById('valore_proprietà').insertAdjacentHTML('beforeend', `<td>${studente[key]}</td>` );
 }
 
-var studenti = [
-  studente1 = {
-  nome: "Piero",
-  cognome: "Calmati",
-  età: 38
-  },
-  studente2 = {
-  nome: "Alterio",
-  cognome: "Prossimo",
-  età: 48
-  },
-  studente3 = {
-  nome: "Carlo",
-  cognome: "Stanco",
-  età: 39
-  }
-];
 
-class StudenteIesimo {
+class StudenteX {
   constructor(nome, cognome, età) {
     this.firstName = nome;
     this.surname = cognome;
     this.age = età;
   }
 }
-var lunghezzaArrayStudenti = studenti.length;
-console.log(lunghezzaArrayStudenti);
-
-var studentePlus = "studente" + (lunghezzaArrayStudenti + 1);
-console.log(studentePlus);
 
 
-/*
-var nome = prompt("Inserisci il nome dello studente");
-var cognome = prompt("Inserisci il cognonome dello studente");
-var età = parseInt(prompt("Inserisci l'età dello studente"));
-studente4 = {
-  nome: nome,
-  cognome: cognome,
-  età: età
-};
-studenti.push(studente4);
-console.log(studenti); */
+var studenti = [
+  new StudenteX("Piero","Calmati",38),
+  new StudenteX("Alterio","Prossimo",48),
+  new StudenteX("Carlo","Stanco",39)
+];
+
+btnAdd = document.getElementById("bt_add");
+btnRemoveLast = document.getElementById("bt_remove");
+
+btnAdd.addEventListener("click", function () {
+
+var nomeInput = document.getElementById("nome").value;
+console.log(nomeInput);
+var nomeInputCapitalize = capitalize(nomeInput);
+console.log(nomeInputCapitalize);
+
+var cognomeInput = document.getElementById("cognome").value;
+console.log(cognomeInput);
+var cognomeInputCapitalize = capitalize(cognomeInput);
+console.log(cognomeInputCapitalize);
+
+var etàInput = parseInt(document.getElementById("età").value);
+console.log(etàInput);
+if (nomeInput===""  || cognomeInput==="" || isNaN(etàInput)) {
+  alert("I dati inseriti non sono corretti");
+} else {
+  studenti.push(new StudenteX(nomeInputCapitalize,cognomeInputCapitalize,etàInput));
+  }
+console.log(studenti);
+});
+
+btnRemoveLast.addEventListener("click", function () {
+studenti.pop(new StudenteX());
+console.log(studenti);
+
+});
+
+
+
+
+
 
 
 
