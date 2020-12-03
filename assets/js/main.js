@@ -35,7 +35,7 @@ for (var key in studente) {
   document.getElementById('valore_proprietà').insertAdjacentHTML('beforeend', `<td>${studente[key]}</td>` );
 }
 
-
+//definisco una classe -StudentX che mi permette di poterla richiamare invece di rispecificare ogni volta gli elementi compilati l'oggetto - un po come una funzione 
 class StudenteX {
   constructor(nome, cognome, età) {
     this.firstName = nome;
@@ -44,7 +44,7 @@ class StudenteX {
   }
 }
 
-
+//array di oggetti contenenti le info designate
 var studenti = [
   new StudenteX("Piero","Calmati",38),
   new StudenteX("Alterio","Prossimo",48),
@@ -54,20 +54,24 @@ var studenti = [
 btnAdd = document.getElementById("bt_add");
 btnRemoveLast = document.getElementById("bt_remove");
 
+//attivo l'immissione dal submit - button
 btnAdd.addEventListener("click", function () {
 
 var nomeInput = document.getElementById("nome").value;
 console.log(nomeInput);
+//Trasformo l'iniziale in maiuscola prima di passarla all'array indistintamente da ciò che l'utente inserisce
 var nomeInputCapitalize = capitalize(nomeInput);
 console.log(nomeInputCapitalize);
 
 var cognomeInput = document.getElementById("cognome").value;
 console.log(cognomeInput);
+//Trasformo l'iniziale in maiuscola prima di passarla all'array indistintamente da ciò che l'utente inserisce
 var cognomeInputCapitalize = capitalize(cognomeInput);
 console.log(cognomeInputCapitalize);
 
 var etàInput = parseInt(document.getElementById("età").value);
 console.log(etàInput);
+//Non accetto campi vuoiti o non numeri - in caso contrario avviso l'utente mediante alert
 if (nomeInput===""  || cognomeInput==="" || isNaN(etàInput)) {
   alert("I dati inseriti non sono corretti");
 } else {
@@ -76,10 +80,10 @@ if (nomeInput===""  || cognomeInput==="" || isNaN(etàInput)) {
 console.log(studenti);
 });
 
+//permetto di eliminare l'ultimo elemento inserito - con un campo chiave identificativo potrei permettere l'eliminazione selezionata e/o cercata search
 btnRemoveLast.addEventListener("click", function () {
 studenti.pop(new StudenteX());
 console.log(studenti);
-
 });
 
 
