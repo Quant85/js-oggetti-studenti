@@ -27,9 +27,9 @@ document.getElementById("età").value = "";
 //1. Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età.
 
 var studente = {
-  nome: "Antonio",
-  cognome: "Quattrocchi",
-  età: 35
+  nome: "Maurillo",
+  cognome: "Manara",
+  età: 75
 };
 
 console.log(studente);
@@ -54,9 +54,10 @@ class StudenteX {
 }
 //array di oggetti contenenti le info designate
 var studenti = [
-  new StudenteX("Alterio","Calmati",38),
-  new StudenteX("Primo","Prossimo",48),
-  new StudenteX("Gioia","Stanco",39)
+  new StudenteX("Valentina","Rosselli",28),
+  new StudenteX("Corto","Maltese",53),
+  new StudenteX("Jorge Mario","Bergoglio",84),
+  new StudenteX("Dylan","Dog",34)
 ];
 console.log(studenti);
 

@@ -13,29 +13,98 @@
 .wrap {
   flex-wrap: wrap;
 }
-
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
 /* BODY */
 body {
   min-width: 700px;
   width: 100vw;
   color: #030303;
-  background: #ffffff;
+  background-color: #f2f2f2;
   text-align: center;
   font-size: 20px;
-  font-weight: 800;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
 }
 
 /* MAIN */
+.info_box{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -2px -2px 4px 0px #ffffff,
+  50px 50px 50px 0px rgba(0, 0, 0, .25);
+  padding: 20px;
+  border-radius: 25px;
+  margin: 40px auto;
+  border-radius: 40px;
+  min-height: 900px;
+  max-width: 500px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  padding: 30px;
+}
 
-.row {
-  justify-content: space-around;
-  align-items: center;
+#studente_tipo,
+#students_table {
+  width: 90%;
+  margin: 20px auto;
+  text-align: start;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9),
+  5px 5px 8px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+}
+
+caption{
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Times New Roman',
+  Times,
+  serif;
+  white-space: nowrap;
+}
+caption,
+#student_form {
+  background-color: #f2f3f7;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9),
+  5px 5px 8px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  margin: 20px auto;
+}
+th {
+  text-align: start;
+}
+
+#student_form{
+  width: 90%;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 28px;
+}
+.row {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 label,
 .row.input {
   color: #df400f;
+  text-shadow: -3px -3px 12px rgba(255, 255, 255, 0.9),
+  2px 2px 2px rgba(0, 0, 0, 0.219);
+  margin-right: 15px;
 }
 
 
@@ -47,7 +116,9 @@ input[type=button] {
   font-weight: 500;
   padding: 8px 10px;
   margin-top: 20px;
-  border: 1px solid #b91450;
+  border: 1px solid transparent;
+  box-shadow: 6px 6px 8px rgba(248, 237, 237, 0.9),
+  5px 5px 8px rgba(0, 0, 0, 0.07);
   text-align: center;
   border-radius: 5px;
   text-transform: capitalize;
@@ -55,9 +126,15 @@ input[type=button] {
 
 input[type=submit],
 input[type=button] {
-  background-color: rgb(155, 155, 155);
+  background-color: #f2f3f7;
+  box-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9),
+  5px 5px 8px rgba(0, 0, 0, 0.07);
   font-size: 1.02rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #181717;
   margin: 20px 5px 0;
+}
+
+.col {
+  margin-top: 12px;
 }
